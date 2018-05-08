@@ -14,5 +14,11 @@ dependencies {
 }
 
 tasks.withType(ScalaCompile) {
-scalaCompileOptions.encoding='windows-1252'
+    scalaCompileOptions.encoding='windows-1252'
+}
+
+task showEncoding {
+    doFirst {
+        println(System.getProperty('file.encoding'))
+    }
 }
